@@ -6,17 +6,14 @@ type page = {
   likes: number,
   accounts: string[],
   status: string,
-  
-}
-
-type pageExtended = {
-  details: {
+  details?: {
     createAt: Date;
     updateAt: Date;
   };
-} & page;
+  
+}
 
-  const page1:pageExtended = {
+  const page1:page = {
   title: 'The awesome page',
   likes: 100,
   accounts: ['Max', 'Anton', 'Nikita'],
