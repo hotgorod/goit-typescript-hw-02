@@ -2,7 +2,7 @@
   Використовуйте generics та інтерфейси, щоб виправити помилку в наступних класах:
 */
 
-class Component {
+class Component<T = any> {
   constructor (public props:T) {
 
   }

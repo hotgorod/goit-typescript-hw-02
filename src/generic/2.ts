@@ -4,6 +4,7 @@
   Функція compare повинна повертати AllType.
 */
 
+
 type AllType = {
   name: string;
   position: number;
@@ -11,7 +12,9 @@ type AllType = {
   weight: number
 }
 
-function compare (top, bottom): AllType {
+function compare(
+  top: Pick<AllType, 'name' | 'color'>,
+  bottom: Pick<AllType, 'position' | 'weight'>): AllType {
   return {
     name: top.name,
     color: top.color,
@@ -20,4 +23,3 @@ function compare (top, bottom): AllType {
   }
 }
 
-export {};
